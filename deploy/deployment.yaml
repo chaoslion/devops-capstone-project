@@ -1,6 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: accounts
+  labels:
+    app: accounts
 spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: accounts
   template:
+    metadata:
+      labels:
+        app: accounts
     spec:
       containers:
-      - image: IMAGE_NAME_HERE
-        name: accounts
+        - name: accounts
+          image: IMAGE_NAME_HERE
