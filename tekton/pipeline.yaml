@@ -80,8 +80,6 @@ spec:
       params:
         - name: IMAGE
           value: "$(params.build-image)"
-        - name: DOCKERFILE
-          value: .devcontainer/Dockerfile          
       runAfter:
         - tests
         - lint
